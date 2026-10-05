@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".pertemuan_5.LimaActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#FBB757"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:subtitleTextColor="@android:color/white"
+            app:titleTextColor="@android:color/white"
+            app:layout_scrollFlags="scroll|enterAlways" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="24dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnWebView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Web View"
+                android:backgroundTint="#7493FA"
+                app:layout_anchor="@+id/appBar"
+                app:layout_anchorGravity="bottom|center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit. Odio dolore magna autem et nulla anim et consequat quis. Odio nihil magna dolor eum fuga dolores non excepturi assumenda. Accusamus ea enim temporibus in est culpa fugiat. Quas distinctio et do soluta cupiditate ipsum ea in ex quibusdam reprehenderit accusamus. Autem tempore eligendi vel exercitation culpa accusamus. Vel sunt labore officia aliqua animi non nostrud duis iusto sed dolor. Aliqua vel incididunt non ullamco quibusdam repellendus ut quod veniam dolor et. Et nisi non rerum reprehenderit enim sunt. Occaecat voluptatum dolore corrupti repellendus ad dolore proident esse ea. Ut aliquip optio officia culpa non sunt. Consectetur excepturi proident optio sunt id distinctio veniam voluptas dolore. Animi tempor aut est culpa possimus expedita ut proident quidem placeat est. Assumenda quo dolorem sit sunt vero cillum elit in dolor. Autem in et qui ad cupiditate harum sed. Eum incididunt ut consectetur lorem aut ad irure quibusdam laboris voluptas. Minus qui praesentium deserunt fugiat exercitation. Voluptate eligendi molestias quo consequatur sunt consectetur fugiat praesentium nulla aliquip dignissimos. Quibusdam at velit culpa quo blanditiis tempore id. Corrupti occaecat dolor ducimus sunt vero occaecat blanditiis laboris dolore omnis. Ad soluta assumenda deserunt deserunt ducimus occaecat eiusmod sint anim temporibus consequatur odio. Dolorem nobis ipsum fuga imperdiet eu elit culpa eiusmod nobis. Blanditiis et qui culpa dolor id non dolor minim nobis. In mollit mollit dolor qui est est ea in dolore enim dolor id. Sint voluptatum labore deserunt nostrud labore sint tempore imperdiet sunt incididunt minus." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit. Odio dolore magna autem et nulla anim et consequat quis. Odio nihil magna dolor eum fuga dolores non excepturi assumenda. Accusamus ea enim temporibus in est culpa fugiat. Quas distinctio et do soluta cupiditate ipsum ea in ex quibusdam reprehenderit accusamus. Autem tempore eligendi vel exercitation culpa accusamus. Vel sunt labore officia aliqua animi non nostrud duis iusto sed dolor. Aliqua vel incididunt non ullamco quibusdam repellendus ut quod veniam dolor et. Et nisi non rerum reprehenderit enim sunt. Occaecat voluptatum dolore corrupti repellendus ad dolore proident esse ea. Ut aliquip optio officia culpa non sunt. Consectetur excepturi proident optio sunt id distinctio veniam voluptas dolore. Animi tempor aut est culpa possimus expedita ut proident quidem placeat est. Assumenda quo dolorem sit sunt vero cillum elit in dolor. Autem in et qui ad cupiditate harum sed. Eum incididunt ut consectetur lorem aut ad irure quibusdam laboris voluptas. Minus qui praesentium deserunt fugiat exercitation. Voluptate eligendi molestias quo consequatur sunt consectetur fugiat praesentium nulla aliquip dignissimos. Quibusdam at velit culpa quo blanditiis tempore id. Corrupti occaecat dolor ducimus sunt vero occaecat blanditiis laboris dolore omnis. Ad soluta assumenda deserunt deserunt ducimus occaecat eiusmod sint anim temporibus consequatur odio. Dolorem nobis ipsum fuga imperdiet eu elit culpa eiusmod nobis. Blanditiis et qui culpa dolor id non dolor minim nobis. In mollit mollit dolor qui est est ea in dolore enim dolor id. Sint voluptatum labore deserunt nostrud labore sint tempore imperdiet sunt incididunt minus." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit. Odio dolore magna autem et nulla anim et consequat quis. Odio nihil magna dolor eum fuga dolores non excepturi assumenda. Accusamus ea enim temporibus in est culpa fugiat. Quas distinctio et do soluta cupiditate ipsum ea in ex quibusdam reprehenderit accusamus. Autem tempore eligendi vel exercitation culpa accusamus. Vel sunt labore officia aliqua animi non nostrud duis iusto sed dolor. Aliqua vel incididunt non ullamco quibusdam repellendus ut quod veniam dolor et. Et nisi non rerum reprehenderit enim sunt. Occaecat voluptatum dolore corrupti repellendus ad dolore proident esse ea. Ut aliquip optio officia culpa non sunt. Consectetur excepturi proident optio sunt id distinctio veniam voluptas dolore. Animi tempor aut est culpa possimus expedita ut proident quidem placeat est. Assumenda quo dolorem sit sunt vero cillum elit in dolor. Autem in et qui ad cupiditate harum sed. Eum incididunt ut consectetur lorem aut ad irure quibusdam laboris voluptas. Minus qui praesentium deserunt fugiat exercitation. Voluptate eligendi molestias quo consequatur sunt consectetur fugiat praesentium nulla aliquip dignissimos. Quibusdam at velit culpa quo blanditiis tempore id. Corrupti occaecat dolor ducimus sunt vero occaecat blanditiis laboris dolore omnis. Ad soluta assumenda deserunt deserunt ducimus occaecat eiusmod sint anim temporibus consequatur odio. Dolorem nobis ipsum fuga imperdiet eu elit culpa eiusmod nobis. Blanditiis et qui culpa dolor id non dolor minim nobis. In mollit mollit dolor qui est est ea in dolore enim dolor id. Sint voluptatum labore deserunt nostrud labore sint tempore imperdiet sunt incididunt minus." />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Lorem ipsum dolor sit amet consectetur adipiscing elit. Odio dolore magna autem et nulla anim et consequat quis. Odio nihil magna dolor eum fuga dolores non excepturi assumenda. Accusamus ea enim temporibus in est culpa fugiat. Quas distinctio et do soluta cupiditate ipsum ea in ex quibusdam reprehenderit accusamus. Autem tempore eligendi vel exercitation culpa accusamus. Vel sunt labore officia aliqua animi non nostrud duis iusto sed dolor. Aliqua vel incididunt non ullamco quibusdam repellendus ut quod veniam dolor et. Et nisi non rerum reprehenderit enim sunt. Occaecat voluptatum dolore corrupti repellendus ad dolore proident esse ea. Ut aliquip optio officia culpa non sunt. Consectetur excepturi proident optio sunt id distinctio veniam voluptas dolore. Animi tempor aut est culpa possimus expedita ut proident quidem placeat est. Assumenda quo dolorem sit sunt vero cillum elit in dolor. Autem in et qui ad cupiditate harum sed. Eum incididunt ut consectetur lorem aut ad irure quibusdam laboris voluptas. Minus qui praesentium deserunt fugiat exercitation. Voluptate eligendi molestias quo consequatur sunt consectetur fugiat praesentium nulla aliquip dignissimos. Quibusdam at velit culpa quo blanditiis tempore id. Corrupti occaecat dolor ducimus sunt vero occaecat blanditiis laboris dolore omnis. Ad soluta assumenda deserunt deserunt ducimus occaecat eiusmod sint anim temporibus consequatur odio. Dolorem nobis ipsum fuga imperdiet eu elit culpa eiusmod nobis. Blanditiis et qui culpa dolor id non dolor minim nobis. In mollit mollit dolor qui est est ea in dolore enim dolor id. Sint voluptatum labore deserunt nostrud labore sint tempore imperdiet sunt incididunt minus." />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
