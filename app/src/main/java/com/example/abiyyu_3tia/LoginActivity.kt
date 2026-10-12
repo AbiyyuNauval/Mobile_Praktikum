@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat
 import com.example.abiyyu_3tia.databinding.ActivityLoginBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
+import kotlin.math.log
 
 class LoginActivity : AppCompatActivity() {
     private lateinit var binding: ActivityLoginBinding
@@ -30,22 +31,37 @@ class LoginActivity : AppCompatActivity() {
             insets
         }
 
-//        val btnLogin : Button = findViewById(R.id.btn_login)
-//        val username : EditText = findViewById(R.id.edtUsername)
-//        val password : EditText = findViewById(R.id.edtPassword)
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
 
+        val isLogin = sharedPref.getBoolean("isLogin", false)
+        if (isLogin) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+            return
+        }
 
         binding.btnLogin.setOnClickListener {
             val inputedUsername = binding.edtUsername.text.toString()
             val inputedPassword = binding.edtPassword.text.toString()
 
-            val intent = Intent(this, MainActivity::class.java)
-            intent.putExtra("EXTRA_USER", inputedUsername)
-            intent.putExtra("EXTRA_PASS", inputedPassword)
-            startActivity(intent)
+            if (inputedUsername.isNotEmpty() && inputedUsername == inputedPassword) {
+                val editor = sharedPref.edit()
+                editor.putBoolean("isLogin", true)
+                editor.putString("username", inputedUsername)
+                editor.apply()
 
-            Log.d("Output", "Username: $inputedUsername Password: $inputedPassword")
-            Toast.makeText(this, "Username: $inputedUsername Password: $inputedPassword", Toast.LENGTH_LONG).show()
+                val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("EXTRA_USER", inputedUsername)
+                intent.putExtra("EXTRA_PASS", inputedPassword)
+                startActivity(intent)
+                finish()
+            } else {
+                AlertDialog.Builder(this)
+                    .setTitle("Login Gagal")
+                    .setMessage("Silahkan coba lagi")
+                    .setPositiveButton("OK") { dialog, _ -> dialog.dismiss() }
+                    .show()
+            }
         }
     }
 }
