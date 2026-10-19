@@ -2,7 +2,6 @@ package com.example.abiyyu_3tia
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AlertDialog
@@ -10,8 +9,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.abiyyu_3tia.databinding.ActivityMainBinding
-import com.example.abiyyu_3tia.pertemuan_5.LimaActivity
-import com.example.abiyyu_3tia.pertemuan_6.EnamActivity
+import com.example.abiyyu_3tia.Home.pertemuan_5.LimaActivity
+import com.example.abiyyu_3tia.Home.pertemuan_6.EnamActivity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.snackbar.Snackbar
 

@@ -1,6 +1,5 @@
-package com.example.abiyyu_3tia.pertemuan_6
+package com.example.abiyyu_3tia.Home.pertemuan_6
 
-import android.app.Activity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.activity.enableEdgeToEdge
