@@ -1,11 +1,18 @@
 package com.example.abiyyu_3tia.Message
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.MenuProvider
+import androidx.lifecycle.Lifecycle
+import com.example.abiyyu_3tia.TutorialMessageActivity
 import com.example.abiyyu_3tia.R
 import com.example.abiyyu_3tia.databinding.FragmentMessageBinding
 
@@ -37,6 +44,22 @@ class MessageFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         (requireActivity() as AppCompatActivity).setSupportActionBar(binding.toolbar)
         (requireActivity() as AppCompatActivity).supportActionBar?.title = "Message"
+
+        requireActivity().addMenuProvider(object : MenuProvider {
+            override fun onCreateMenu(menu: Menu, menuInflater: MenuInflater) {
+                menuInflater.inflate(R.menu.message_toolbar_menu, menu)
+            }
+
+            override fun onMenuItemSelected(menuItem: MenuItem): Boolean {
+                return when (menuItem.itemId) {
+                    R.id.action_tutorial -> {
+                        startActivity(Intent(requireContext(), TutorialMessageActivity::class.java))
+                        true
+                    }
+                    else -> false
+                }
+            }
+        }, viewLifecycleOwner, Lifecycle.State.RESUMED)
 
         val adapter = MessageAdapter(requireContext(), messageList)
         binding.listMessageItems.adapter = adapter

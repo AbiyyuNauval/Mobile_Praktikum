@@ -21,9 +21,17 @@ class SplashScreenActivity : AppCompatActivity() {
             insets
         }
 
+        val sharedPref = getSharedPreferences("user_pref", MODE_PRIVATE)
+        val isLogin = sharedPref.getBoolean("isLogin", false)
+
+        if (isLogin){
+            startActivity(Intent(this@SplashScreenActivity, BaseActivity::class.java))
+            finish()
+        }
+
         lifecycleScope.launch {
             delay(2000)
-            val intent = Intent(this@SplashScreenActivity, LoginActivity::class.java)
+            val intent = Intent(this@SplashScreenActivity, TutorialMessageActivity::class.java)
             startActivity(intent)
             finish()
         }

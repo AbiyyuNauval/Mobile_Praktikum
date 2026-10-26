@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.abiyyu_3tia.Home.pertemuan_5.LimaActivity
 import com.example.abiyyu_3tia.Home.pertemuan_6.EnamActivity
+import com.example.abiyyu_3tia.Home.pertemuan_9.NinthActivity
 import com.example.abiyyu_3tia.LoginActivity
 import com.example.abiyyu_3tia.MainActivity
 import com.example.abiyyu_3tia.R
@@ -68,13 +69,15 @@ class HomeFragment : Fragment() {
         }
 
         binding.btnToLima.setOnClickListener {
-            val intent = Intent(requireContext(), LimaActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(requireContext(), LimaActivity::class.java))
         }
 
         binding.btnToEnam.setOnClickListener {
-            val intent = Intent(requireContext(), EnamActivity::class.java)
-            startActivity(intent)
+            startActivity(Intent(requireContext(), EnamActivity::class.java))
+        }
+
+        binding.btnToSembilan.setOnClickListener {
+            startActivity(Intent(requireContext(), NinthActivity::class.java))
         }
 
         binding.btnLogout.setOnClickListener {
